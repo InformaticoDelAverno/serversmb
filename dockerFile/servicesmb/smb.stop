@@ -1,0 +1,3 @@
+#!/bin/bash
+service smbdr stop
+service rsyslog stop

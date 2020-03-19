@@ -1,0 +1,3 @@
+#!/bin/bash
+service smbd start
+exec inotifywait -m /shared
