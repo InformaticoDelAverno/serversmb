@@ -29,7 +29,7 @@ For example:
 $ mount -t cifs -o username=guest,password="" //172.17.0.2/shared /path/local/de/montaje
 ```
 # Notas
-- "**cifs-utilsr**" en ocasiones tiene que estar instalado para habilitar el soporte para montar SMB.
+- "**cifs-utils**" en ocasiones tiene que estar instalado para habilitar el soporte para montar SMB.
 ```sh
 $ apt-get install cifs-utils
 ```
