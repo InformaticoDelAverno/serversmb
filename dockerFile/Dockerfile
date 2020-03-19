@@ -6,9 +6,7 @@ RUN apt-get update -qq && apt-get install -y samba runit inotify-tools -qq
 RUN mkdir -p /shared
 RUN chmod -R 777 /shared
 
-COPY ./run/configsmb.sh /usr/local/bin/configsmb.sh
-RUN chmod 744 /usr/local/bin/configsmb.sh
-RUN ./usr/local/bin/configsmb.sh
+COPY ./conf/smb.conf /etc/samba/smb.conf
 
 RUN mkdir -p /etc/sv/smb
 
