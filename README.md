@@ -11,13 +11,13 @@ $ docker build ./dockerFile -t serversmb
 
 Si has construido localmente la imagen, el comando que debes utilizar es:
 ```sh
-$ docker run -v /path/local:/shared serversmb
+$ docker run -d -p 445:445 --name serversmb -v /path/local:/shared serversmb
 ```
 Si no quieres construirte la imagen, puedes utilizar una ya construida que se encuentra publicada en [Docker hub](https://hub.docker.com/r/informaticodelaverno/serversmb).
 
 Para crear un contenedor de esta imagen  (Compartiendo "**/path/local**" vía SMB), hay que ejecutar:
 ```sh
-$ docker run -v /path/local:/shared informaticodelaverno/serversmb
+$ docker run -d -p 445:445 --name serversmb -v /path/local:/shared informaticodelaverno/serversmb
 ```
 ## Montar el directorio expuesto por el contenedor
 El contenedor siempre expone el path "**/shared**", así que para montar ese path el comando a lanzar es el siguiente:
