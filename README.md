@@ -22,11 +22,11 @@ $ docker run -d -p 445:445 --name serversmb -v /path/local:/shared informaticode
 ## Montar el directorio expuesto por el contenedor
 El contenedor siempre expone el path "**/shared**", así que para montar ese path el comando a lanzar es el siguiente:
 ```sh
-$ mount -t cifs -o username=guest,password="" //IPDelContenedor/shared /path/local/de/montaje
+$ mount -t cifs -o username=guest,password="" //IP/shared /path/local/de/montaje
 ```
 For example:
 ```sh
-$ mount -t cifs -o username=guest,password="" //172.17.0.2/shared /path/local/de/montaje
+$ mount -t cifs -o username=guest,password="" //192.168.0.30/shared /path/local/de/montaje
 ```
 # Notas
 - "**cifs-utils**" en ocasiones tiene que estar instalado para habilitar el soporte para montar SMB.
